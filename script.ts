@@ -77,7 +77,7 @@ const run = async () => {
       if (data.emails.length == 0) {
         return await getOTP();
       } else {
-        return regex.exec(data.emails[0].stripped_text.replaceAll(/\s/g, ''))[0];
+        return regex.exec(data.emails[0].stripped_text.replace(/\s/g, ''))[0];
       }
     };
 
